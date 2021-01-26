@@ -29,11 +29,14 @@ public class PasswordManagementServiceImpl implements PasswordManagementService 
 		this.pattern = Pattern.compile(VALID_CHARACTERS);
 	}
 
-	public Boolean validationPassword(String password) {
-		
+	   @Override
+	    public Boolean validationPassword(String password){
+	        Optional.ofNullable(password).orElseThrow(() -> new RuntimeException("Password cannot be null"));
 
-		return this.matcher.matches();
+	        this.matcher = pattern.matcher(password);
 
-	}
+	            return this.matcher.matches();
+
+	    }
 
 }

@@ -3,7 +3,7 @@ package com.renato.management.service;
 public interface PasswordManagementService {
 
 	/**
-	 * Classe interface for to recive PasswordValidationServiceImpl
+	 * Class interface for to implement  PasswordManagementServiceImpl
 	 * 
 	 * @param password
 	 * @return Boolean
