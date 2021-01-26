@@ -2,20 +2,20 @@
 
 # Password-Manager-API       
 
-	*under development
+	* under development
  
 ### Dependencies 
 
-	*Java 8
-	*jUnit 5 (org.junit.jupiter.api, org.junit.jupiter.engine and org.junit.jupiter.params - 5.4.0)
-	*Log4j (1.2.17)
-	*Joda Time (2.10.3)
-	*Coveralls (4.3.0)
-	*Jacoco (0.7.9)
+* Java 8
+* jUnit 5 (org.junit.jupiter.api, org.junit.jupiter.engine and org.junit.jupiter.params - 5.4.0)
+* Log4j (1.2.17)
+* Joda Time (2.10.3)
+* Coveralls (4.3.0)
+* Jacoco (0.7.9)
 
 ### Git hub
 
-	*Referências para o desenvolvimento do modelo de testes.
+*Referências para o desenvolvimento do modelo de testes.
 
 
 
@@ -33,7 +33,7 @@
 
 	Certifique-se de ter o Maven instalado e adicionado ao PATH de seu sistema operacional, assim como o Git.
 	
-	git clone https://github.com/Relesi/cucumber-java
+	
 	cd /path/to/your/repo
 	mvn spring-boot:run
 
