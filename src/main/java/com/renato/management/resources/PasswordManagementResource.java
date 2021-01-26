@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.renato.management.service.impl.PasswordManagementServiceImpl;
 
-import io.swagger.annotations.Api;
-
 /**
  * Resource Class for method to password manager
  * 

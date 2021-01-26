@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Classe interface for to recive PasswordValidationServiceImpl
+ * Classe interface for to implement PasswordValidationServiceImpl
  * 
  * @param password
  * @return Boolean
@@ -29,14 +29,14 @@ public class PasswordManagementServiceImpl implements PasswordManagementService 
 		this.pattern = Pattern.compile(VALID_CHARACTERS);
 	}
 
-	   @Override
-	    public Boolean validationPassword(String password){
-	        Optional.ofNullable(password).orElseThrow(() -> new RuntimeException("Password cannot be null"));
+	@Override
+	public Boolean validationPassword(String password) {
+		Optional.ofNullable(password).orElseThrow(() -> new RuntimeException("Password cannot be null"));
 
-	        this.matcher = pattern.matcher(password);
+		this.matcher = pattern.matcher(password);
 
-	            return this.matcher.matches();
+		return this.matcher.matches();
 
-	    }
+	}
 
 }
