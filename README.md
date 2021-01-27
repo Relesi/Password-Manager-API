@@ -39,17 +39,16 @@ in addition to checking bugs and unit tests.
 
 * .travis.yml
 
-	language: java
-		jdk:
-		  - "openjdk11"
-		sudo: false
-		cache:
-		  directories:
-		    - $HOME/.m2
-		before_install:
-		- chmod +x mvnw    
+		language: java
+	jdk:
+	  - "openjdk11"
+	sudo: false
+	cache:
+	  directories:
+	    - $HOME/.m2
+	before_install:
+	- chmod +x mvnw    
 		
-	
 * Build Config
 
 	  {
