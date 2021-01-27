@@ -2,21 +2,33 @@
 
 # Password-Manager-API       
 
-	* under development
+**Manager-API Specification** (formerly Swagger Specification) is an API description format for REST APIs. An OpenAPI file allows you to describe your entire API, including:
+
+* Available endpoints (```/management-password```) and operations on each endpoint ( ```POST /management-password```)
+* Operation parameters Input and output for each operation
+* Authentication methods
+
+	
+* The Password-Manager-API has to perform password validations according to its criteria, returning TRUE when it is valid and FALSE when it is invalid.
+
+* Configure the parameters to be Headers
+* No KEY fields use the following parameter: password
+* No Value fields pass a String. Example: Rls2801973!
+* Check the result in Postman, if your password is valid, an API will return a Boolean TRUE, if a password is not valid, an API will return a Boolean FALSE
+
+* Responses
+For each operation, you can define possible status codes, such as 200 OK, 404 Not Found or "status": 400,
+    "error": "Bad Request", and schema of the response body. Schemas can be defined inline or referenced from an external definition via $ref. You can also provide example responses for different content types.
  
 ### Dependencies 
 
-* Java 8
+* Java 11
+* Maven 2.4.11
+* Spring Framework Versão (2.4.2) 
 * jUnit 5 (org.junit.jupiter.api, org.junit.jupiter.engine and org.junit.jupiter.params - 5.4.0)
 * Log4j (1.2.17)
-* Joda Time (2.10.3)
-* Coveralls (4.3.0)
 * Jacoco (0.7.9)
-
-### Git hub
-
-*Referências para o desenvolvimento do modelo de testes.
-
+* Swagger(2.7.0)
 
 
 ### Travis-CI
@@ -88,31 +100,23 @@ paths:
 * swagger.json: `http://127.0.0.1:8080/v2/api-docs`
 
 
-### Como executar a aplicação
+### How to run the service
 
-	Certifique-se de ter o Maven instalado e adicionado ao PATH de seu sistema operacional, assim como o Git.
+*Make sure you have Maven installed and added to your operating system's PATH, as well as Git.
 	
-	
-	cd /path/to/your/repo
-	mvn spring-boot:run
-
+*cd /path/to/your/repo
+*mvn spring-boot:run
 
 
+### Importing the project into Eclipse STS, Eclipse or Intellij
 
-
-### Importando o projeto no Eclipse, STS 
-
-	No terminal, execute a seguinte operação:
 	
-	mvn eclipse:eclipse
+*mvn eclipse:eclipse
 	
-	No Eclipse/STS, importe o projeto como projeto Maven.
-	
-	Depois que o projeto estiver importado, mude o application para test e execute os seguintes comandos. 
-	
-	mvn clean install
-	mvn install 
-	
-	maven - update project
+*In STS/Eclipse import the project as project  Maven.
+*After the project is imported, change the application to test and run the following commands.
+*mvn clean install
+*mvn install 
+*maven - update project
 
 
