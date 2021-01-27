@@ -26,13 +26,67 @@
 	* https://travis-ci.org/
 
 
-### Swagger
 
-* swagger.json: `http://127.0.0.1:8080/v2/api-docs`
+
+## Introduction to OpenAPI Specification
+
+### **Basic Structure**
+Swagger can be written in JSON or YAML. In this guide, we only use YAML examples, but JSON works equally well. A sample Swagger specification written in YAML looks like:
+
+```yaml
+swagger: '2.0'
+info:
+  description: API for the purpose of managing valid password
+  version: '1.0'
+  title: Password-Manager-API
+host: '127.0.0.1:8080'
+basePath: /
+tags:
+  - name: password-management-resource
+    description: Password Management Resource
+paths:
+  /management-password:
+    post:
+      tags:
+        - password-management-resource
+      summary: passwordValidation
+      operationId: passwordValidationUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        - name: password
+          in: header
+          description: password
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '201':
+          description: Created
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+```
+
+### Swagger-ui
 
 * swagger-ui: `http://127.0.0.1:8080/swagger-ui.html`
 
 ![Demo-Api](swagger-ui.png)
+
+
+### Swagger-io
+
+* swagger.json: `http://127.0.0.1:8080/v2/api-docs`
+
 
 ### Como executar a aplicação
 
