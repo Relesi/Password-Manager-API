@@ -33,7 +33,7 @@ For each operation, you can define possible status codes, such as 200 OK, 404 No
 
 ### Travis-CI
 
-	```language: java
+	language: java
 	jdk:
 	  - "openjdk11"
 	sudo: false
@@ -42,11 +42,11 @@ For each operation, you can define possible status codes, such as 200 OK, 404 No
 	    - $HOME/.m2
 	before_install:
 	- chmod +x mvnw    
-	```
+	
 	
 * Build Config
 
-		```{
+	  {
 	  "language": "java",
 	  "os": [
 	    "linux"
@@ -65,7 +65,6 @@ For each operation, you can define possible status codes, such as 200 OK, 404 No
 	    "chmod +x mvnw"
 	  ]
 	}    
-		```
 	
 * https://travis-ci.org/github/Relesi/Password-Manager-API/builds/756444677
 
