@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Relesi/cucumber-java.svg?branch=master)](https://travis-ci.org/Relesi/cucumber-java)
+[![Build Status](https://travis-ci.org/Relesi/Password-Manager-API.svg?branch=master)](https://travis-ci.org/Relesi/Password-Manager-API)
 
 # Password-Manager-API       
 
@@ -33,11 +33,41 @@ For each operation, you can define possible status codes, such as 200 OK, 404 No
 
 ### Travis-CI
 
-	Utilizo o travis-ci para integração continua.
+	```language: java
+	jdk:
+	  - "openjdk11"
+	sudo: false
+	cache:
+	  directories:
+	    - $HOME/.m2
+	before_install:
+	- chmod +x mvnw    
+	```
 	
-	* https://travis-ci.org/
+* Build Config
 
-
+		```{
+	  "language": "java",
+	  "os": [
+	    "linux"
+	  ],
+	  "dist": "xenial",
+	  "jdk": [
+	    "openjdk11"
+	  ],
+	  "sudo": false,
+	  "cache": {
+	    "directories": [
+	      "$HOME/.m2"
+	    ]
+	  },
+	  "before_install": [
+	    "chmod +x mvnw"
+	  ]
+	}    
+		```
+	
+* https://travis-ci.org/github/Relesi/Password-Manager-API/builds/756444677
 
 
 ## Introduction to Password-Manager-API Specification
