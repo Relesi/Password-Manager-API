@@ -32,7 +32,7 @@ public class PasswordManagementResource {
 
 		log.info("Starting password validation...");
 
-		 return this.passwordMagementService.validationPassword(password);
+		return this.passwordMagementService.validationPassword(password);
 
 	}
 

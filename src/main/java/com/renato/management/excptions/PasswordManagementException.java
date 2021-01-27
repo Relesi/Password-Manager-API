@@ -2,9 +2,7 @@ package com.renato.management.excptions;
 
 public class PasswordManagementException extends RuntimeException {
 
-	
 	private static final long serialVersionUID = 692935558423031577L;
-
 
 	public PasswordManagementException() {
 		super();
@@ -18,7 +16,7 @@ public class PasswordManagementException extends RuntimeException {
 		super(msg);
 	}
 
-	public PasswordManagementException(Throwable cause){
-        super(cause.getMessage(), cause);
-    }
+	public PasswordManagementException(Throwable cause) {
+		super(cause.getMessage(), cause);
+	}
 }

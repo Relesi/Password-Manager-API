@@ -40,7 +40,7 @@ For each operation, you can define possible status codes, such as 200 OK, 404 No
 
 
 
-## Introduction to OpenAPI Specification
+## Introduction to Password-Manager-API Specification
 
 ### **Basic Structure**
 Swagger can be written in JSON or YAML. In this guide, we only use YAML examples, but JSON works equally well. A sample Swagger specification written in YAML looks like:
@@ -102,21 +102,19 @@ paths:
 
 ### How to run the service
 
-*Make sure you have Maven installed and added to your operating system's PATH, as well as Git.
-	
-*cd /path/to/your/repo
-*mvn spring-boot:run
+* Make sure you have Maven installed and added to your operating system's PATH, as well as Git.	
+* cd /path/to/your/repo
+* mvn spring-boot:run
 
 
 ### Importing the project into Eclipse STS, Eclipse or Intellij
 
+* mvn eclipse:eclipse
 	
-*mvn eclipse:eclipse
-	
-*In STS/Eclipse import the project as project  Maven.
-*After the project is imported, change the application to test and run the following commands.
-*mvn clean install
-*mvn install 
-*maven - update project
+* In STS/Eclipse import the project as project  Maven.
+* After the project is imported, change the application to test and run the following commands.
+* mvn clean install
+* mvn install 
+* maven - update project
 
 
