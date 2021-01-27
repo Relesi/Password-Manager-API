@@ -33,6 +33,12 @@ For each operation, you can define possible status codes, such as 200 OK, 404 No
 
 ### Travis-CI
 
+* I believe that, with a continuous integration platform, The goal is to build healthier software by developing and testing in smaller increments.
+* Travis CI supports your development process by automatically building and testing code changes, and also
+in addition to checking bugs and unit tests.
+
+
+
 	language: java
 	jdk:
 	  - "openjdk11"
