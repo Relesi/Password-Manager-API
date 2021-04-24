@@ -1,13 +1,34 @@
 package com.renato.management;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.io.IOException;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
+@RunWith(MockitoJUnitRunner.class)
 @SpringBootTest
-class ManagerApiApplicationTests {
+public class ManagerApiApplicationTests {
+
+	@Before
+	public void setUp() throws IOException {
+		MockitoAnnotations.initMocks(this);
+	}
 
 	@Test
-	void contextLoads() {
+	public void testMain() {
+		ManagerApiApplication.main(new String[] { "Test" });
+		assertNotNull(ManagerApiApplication.class);
+	}
+
+	@Test
+	public void testMainNotNull() {
+		assertNotNull(ManagerApiApplication.class);
 	}
 
 }
